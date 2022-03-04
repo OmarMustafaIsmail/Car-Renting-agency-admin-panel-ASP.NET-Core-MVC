@@ -1,0 +1,40 @@
+﻿@model Cars
+
+<div class="row" style="padding-top:20px">
+    <div class="col-md-3">
+        <a asp-controller="Cars" asp-action="Cars"><i class="bi bi-arrow-left bi-lg"></i></a>
+    </div>
+    <div class="col-md-7">
+        <h3 style="color:maroon;" class="text-center">Are you sure you want to delete this car!!?</h3>
+        <h5 style="color: maroon;padding-bottom:100px" class="text-center">Please note that this action can not be undone</h5>
+    </div>
+</div>
+
+
+
+
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <img src="@Model.ImageUrl" style="width:500px" ; />
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4" style="padding-bottom:20px">
+        <h5>@Model.MarkName</h5>
+        <h8>@Model.ManYear</h8>
+        <div class="card " style="background-color:@Model.Color;width:30px; height:4px"></div>
+        <h8>$@Model.Price</h8>
+        <form style="padding-top:20px" method="post" asp-controller="Cars" asp-action="DeleteCar">
+            <input type="hidden" asp-for="Id" />
+            <div class="row">
+                <div class="col-md-5">
+                    <button type="submit" class="btn btn-danger rounded-lg">Delete Car</button>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+</div>
+

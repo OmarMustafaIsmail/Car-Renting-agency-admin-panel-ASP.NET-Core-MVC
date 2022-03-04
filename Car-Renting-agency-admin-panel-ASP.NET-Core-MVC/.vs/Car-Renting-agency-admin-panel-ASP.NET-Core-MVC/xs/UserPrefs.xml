@@ -1,4 +1,46 @@
 ﻿<Properties StartupConfiguration="{56B19FB2-045E-4ABD-ACCC-975E2A07371B}|Default">
-  <MonoDevelop.Ide.ItemProperties.Car-Renting-agency-admin-panel-ASP.NET-Core-MVC FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/appsettings.json" Line="14" Column="1" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Startup.cs" Line="61" Column="72" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Data/ApplicationDbContext.cs" Line="6" Column="11" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Models/ApplicationUsers.cs" Line="26" Column="1" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Models/Cars.cs" Line="6" Column="2" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Models/Clients.cs" Line="5" Column="11" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Views/Cars/Cars.cshtml" Line="1" Column="1" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Views/Clients/Create.cshtml" Line="1" Column="1" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Views/Clients/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Views/Clients/Edit.cshtml" Line="22" Column="19" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Controllers/AccountController.cs" Line="15" Column="1" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Controllers/CarsController.cs" Line="14" Column="58" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Controllers/ClientsController.cs" Line="13" Column="58" />
+      <File FileName="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Controllers/HomeController.cs" Line="9" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC" expanded="True">
+            <Node name="Car-Renting-agency-admin-panel-ASP.NET-Core-MVC" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="ViewModels" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True" />
+              <Node name="wwwroot" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Car-Renting-agency-admin-panel-ASP.NET-Core-MVC FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

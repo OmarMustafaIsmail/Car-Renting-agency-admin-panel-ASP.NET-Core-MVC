@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Identity;
+
+@inject UserManager<IdentityUser> userManager;
+
+@inject SignInManager<IdentityUser> signInManager;
+
+
+<ul class="navbar-nav">
+    @if (signInManager.IsSignedIn(User))
+    {
+        <li>
+            <i class="bi bi-person-circle nav-link"></i>
+        </li>
+        <li class="navar-item">
+            <a class="nav-link ">@userManager.GetUserName(User)</a>
+        </li>
+
+        <li>
+            <form class="form-inline" method="post" asp-controller="Account" asp-action="SignOutUser">
+                <button type="submit" class="btn btn-link nav-link">Sign Out</button>
+            </form>
+        </li>
+
+
+
+    }
+    else
+    {
+
+        <li>
+            <a class="nav-link " asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+        </li>
+
+        <li>
+            <a class="nav-link " asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+        </li>
+
+    }
+
+
+
+</ul>
+
+

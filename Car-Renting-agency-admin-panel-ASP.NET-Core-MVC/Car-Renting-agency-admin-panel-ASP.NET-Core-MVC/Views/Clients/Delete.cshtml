@@ -1,0 +1,58 @@
+﻿@model Clients
+
+<div class="row" style="padding-top:20px">
+    <div class="col-md-2">
+        <a asp-controller="Clients" asp-action="Clients"><i class="bi bi-arrow-left bi-lg"></i></a>
+    </div>
+    <div class="col-md-8">
+        <h3 style="color:maroon;" class="text-center">Are you sure you want to delete this Client!!?</h3>
+        <h5 style="color: maroon;" class="text-center">Please note that this action can not be undone</h5>
+        <h6 style="color: maroon;padding-bottom:100px" class="text-center">all data related to this client will be removed</h6>
+    </div>
+</div>
+
+
+
+
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <img src="@Model.car.ImageUrl" style="width:500px" ; />
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4" style="padding-bottom:20px">
+        <h5>@Model.FullName</h5>
+        <h7>@Model.Email</h7><br />
+        <h8>@Model.PhoneNumber</h8><br />
+        <h8>@Model.car.MarkName
+        <form style="padding-top:20px" method="post" asp-controller="Clients" asp-action="DeleteClient">
+            <input type="hidden" asp-for="Id" />
+            <div class="row">
+                <div class="col-md-5">
+                    <button type="submit" class="btn btn-danger rounded-lg">Delete Client</button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+
+
+@*<form style="padding-bottom:50px" method="post" asp-controller="Cars" asp-action="DeleteCar">
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-danger rounded-lg">Delete Car</button>
+            </div>
+            <div class="col-md-2">
+                <a asp-controller="Cars" asp-action="Cars" class="btn btn-primary rounded-lg">View all Cars</a>
+            </div>
+        </div>
+
+    </form>
+*@

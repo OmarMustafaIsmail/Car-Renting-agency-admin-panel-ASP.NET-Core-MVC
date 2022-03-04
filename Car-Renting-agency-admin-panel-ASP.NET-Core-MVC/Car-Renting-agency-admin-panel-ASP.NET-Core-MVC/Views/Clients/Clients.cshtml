@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Clients>
+
+
+
+<h1 style="color:maroon; padding-top:20px" class="text-center">
+    Clients
+</h1>
+
+<div class="row">
+
+    <div class="col-md-9">
+        <a style="margin-bottom:20px" asp-controller="Clients" asp-action="GetCreateView" class="btn btn-primary mt-2 rounded-lg">Add Client</a>
+        @if (Model.ToList().Count != 0)
+        {
+            <div>
+                <form method="get" asp-controller="Clients" asp-action="Clients">
+                    <label class="form-label">Page Size</label>
+                    <input value="@ViewBag.CurrentPageSize" type="number" name="pageSize" />
+
+                    <label class="">Page Number</label>
+                    <input value="@ViewBag.CurrentPageNumber" type="number" name="pageNumber" />
+
+                    <button type="submit" class="btn btn-secondary rounded-lg">Go</button>
+
+                </form>
+            </div>
+        }
+    </div>
+    @if (Model.ToList().Count != 0) { 
+        <div class="col-md-3">
+            <form class="d-flex" method="get" asp-controller="Clients" asp-action="Clients">
+                <input name="search" value="@ViewBag.CurrentSearch" class="form-control me-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+        </div>
+    }
+
+
+</div>
+@*<a style="margin-bottom:20px" asp-controller="Clients" asp-action="GetCreateView" class="btn btn-primary mt-2 rounded-lg">Add Client</a>*@
+
+
+@if (Model.ToList().Count == 0)
+{<h1 class="text-center" style="color:maroon;padding-top:20px">No clients to show </h1>}
+else
+{
+
+    <table class="table table-bordered table-hover table-striped text-center">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(car => car.Id)</th>
+                <th>@Html.DisplayNameFor(car => car.FullName)</th>
+                <th>@Html.DisplayNameFor(car => car.Email)</th>
+                <th>@Html.DisplayNameFor(car => car.PhoneNumber)</th>
+                <th>@Html.DisplayNameFor(car => car.car)</th>
+
+
+                <th>Remove</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.FullName</td>
+                    <td>@item.Email</td>
+                    <td>@item.PhoneNumber</td>
+                    <td>@item.car.MarkName </td>
+
+                    <td><a style="color:red" asp-controller="Clients" asp-action="GetDeleteView" asp-route-id="@item.Id"><i class="bi bi-trash"></i></a></td>
+
+                    <td>
+                        <a style="color:darkblue" asp-controller="Clients" asp-action="GetEditView" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+
+    </table>
+}

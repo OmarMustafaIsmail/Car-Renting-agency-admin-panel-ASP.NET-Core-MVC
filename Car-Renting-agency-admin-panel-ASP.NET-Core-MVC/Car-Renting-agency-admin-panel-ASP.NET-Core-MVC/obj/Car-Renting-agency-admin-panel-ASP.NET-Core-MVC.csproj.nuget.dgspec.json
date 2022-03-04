@@ -14,7 +14,7 @@
         "outputPath": "/Users/me-mac/Work/Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/Car-Renting-agency-admin-panel-ASP.NET-Core-MVC/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/me-mac/.config/NuGet/NuGet.Config"
+          "/Users/me-mac/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

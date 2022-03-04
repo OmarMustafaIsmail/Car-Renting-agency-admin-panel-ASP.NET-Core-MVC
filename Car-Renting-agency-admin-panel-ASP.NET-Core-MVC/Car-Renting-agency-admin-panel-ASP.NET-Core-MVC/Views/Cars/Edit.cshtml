@@ -1,0 +1,44 @@
+﻿@model Cars
+
+
+<h1 class="text-center" style="padding-bottom:50px;padding-top:20px">Edit Car Details</h1>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form style="padding-bottom:40px" method="post" asp-controller="Cars" asp-action="UpdateCar" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" style="color:red"></div>
+            <input asp-for="Id" hidden />
+            <input hidden asp-for="ImageUrl" />
+
+            <div>
+                <label asp-for="MarkName"></label>
+                <input asp-for="MarkName" type="text" class="form-control" />
+                <span asp-validation-for="MarkName" style="color:red"></span>
+            </div>
+            <div>
+                <label asp-for="ManYear"></label>
+                <input asp-for="ManYear" type="number" class="form-control" />
+                <span asp-validation-for="ManYear" style="color:red"></span>
+            </div>
+            <div>
+                <label asp-for="Color"></label>
+                <input class="form-control" asp-for="Color" />
+            </div>
+            <div>
+                <label asp-for="Price"></label>
+                <input asp-for="Price" type="number" class="form-control" />
+                <span asp-validation-for="Price" style="color:red"></span>
+            </div>
+            <div style="padding-bottom:4px">
+                <label asp-for="ImageUrl"></label>
+                <input class="form-control" type="file" name="imageFile" accept=".png,.jpg" />
+
+            </div>
+
+
+            <button style="margin-bottom:40px" type="submit" class="btn btn-primary mt-2 rounded-lg">Update</button>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+
+</div>

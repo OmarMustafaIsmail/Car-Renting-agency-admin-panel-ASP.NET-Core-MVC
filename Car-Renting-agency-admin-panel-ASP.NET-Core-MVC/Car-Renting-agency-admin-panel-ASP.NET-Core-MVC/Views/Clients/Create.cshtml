@@ -1,0 +1,43 @@
+﻿@model Clients
+
+<h1 class="text-center" style="padding-top:20px;padding-bottom:50px">Add a new Client</h1>
+
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form style="padding-bottom:40px" method="post" asp-controller="Clients" asp-action="AddClient" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" style="color:red"></div>
+
+            <div>
+                <label asp-for="FullName"></label>
+                <input placeholder="Full Name" asp-for="FullName" type="text" class="form-control" />
+                <span asp-validation-for="FullName" style="color:red"></span>
+            </div>
+            <div>
+                <label asp-for="Email"></label>
+                <input placeholder="example@gmail.com" asp-for="Email" type="text" class="form-control" />
+                <span asp-validation-for="Email" style="color:red"></span>
+            </div>
+            <div>
+                <label asp-for="PhoneNumber"></label>
+                <input placeholder="***********" asp-for="PhoneNumber" type="number" class="form-control" />
+                <span asp-validation-for="PhoneNumber" style="color:red"></span>
+            </div>
+
+            <div style="margin-top:10px">
+                <label asp-for="CarId" style="margin-right:10px"></label>
+                <select asp-for="CarId" asp-items="@(new SelectList(ViewBag.Allcars,"Id","MarkName"))">
+                    <option disabled selected>Select...</option>
+
+                </select>
+                <span class="text-danger" asp-validation-for="CarId"></span>
+            </div>
+            <button style="margin-bottom:40px" type="submit" class="btn btn-primary mt-2 rounded-lg">Add</button>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+
+</div>
+
+@*@Html.DropDownListFor(c => c.CarId, (SelectList)ViewBag.FullCarName, new { @class = "form-control" })*@

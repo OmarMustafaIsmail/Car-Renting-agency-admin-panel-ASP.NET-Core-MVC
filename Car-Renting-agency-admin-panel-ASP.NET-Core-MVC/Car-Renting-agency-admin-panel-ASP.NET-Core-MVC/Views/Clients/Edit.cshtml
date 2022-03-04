@@ -1,0 +1,44 @@
+﻿@model Clients
+
+
+<h1 class="text-center" style="padding-bottom:50px;padding-top:20px">Edit Car Details</h1>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form style="padding-bottom:40px" method="post" asp-controller="Clients" asp-action="UpdateClient" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" style="color:red"></div>
+            <input asp-for="Id" hidden />
+
+
+            <div>
+                <label asp-for="FullName"></label>
+                <input asp-for="FullName" type="text" class="form-control" />
+                <span asp-validation-for="FullName" style="color:red"></span>
+            </div>
+            <div>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" type="text" class="form-control" />
+                <span asp-validation-for="Email" style="color:red"></span>
+            </div>
+            <div>
+                <label asp-for="PhoneNumber"></label>
+                <input asp-for="PhoneNumber" type="number" class="form-control" />
+                <span asp-validation-for="PhoneNumber" style="color:red"></span>
+            </div>
+
+
+            <div style="margin-top:10px">
+                <label asp-for="CarId" style="margin-right:10px"></label>
+                <select asp-for="CarId" asp-items="@(new SelectList(ViewBag.Allcars,"Id","MarkName"))">
+                    <option disabled selected>Select...</option>
+
+                </select>
+                <span class="text-danger" asp-validation-for="CarId"></span>
+            </div>
+
+            <button style="margin-bottom:40px" type="submit" class="btn btn-primary mt-2 rounded-lg">Update</button>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+
+</div>

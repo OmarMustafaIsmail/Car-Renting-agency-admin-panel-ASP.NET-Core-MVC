@@ -1,0 +1,35 @@
+﻿
+@model LoginViewModel
+
+<h1 class="text-center" style="color:black;padding-top:20px">Log-in</h1>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form method="post" asp-controller="Account" asp-action="LoginUser" asp-route-ReturnUrl="@ViewData["ReturnUrl"]">
+            <div asp-validation-summary="ModelOnly" style="color:red"></div>
+
+            <div>
+                <label asp-for="Email"></label>
+                <input placeholder="example@email.com" asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" style="color:red"></span>
+            </div>
+            <div>
+                <label asp-for="Password"></label>
+                <input placeholder="*******" asp-for="Password" class="form-control"/>
+                <span asp-validation-for="Password" style="color:red"></span>
+            </div>
+            <br />
+            <div>
+                <label asp-for="RememberMe">
+                    <input asp-for="RememberMe" />
+                    @Html.DisplayNameFor(l => l.RememberMe)
+                </label>
+                
+            </div>
+            <button type="submit" class="btn btn-primary mt-2 rounded-lg">Log-in</button>
+
+
+
+        </form>
+    </div>
+</div>
